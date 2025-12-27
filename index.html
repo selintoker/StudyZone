@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>StudyZone - Focus & Productivity</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <div class="header">
+    <h1>StudyZone</h1>
+    <p>Your productivity companion.</p>
+  </div>
+
+  <div class="container">
+    <!-- To-do List -->
+    <div class="column todo-column">
+      <div class="column-header">
+        <span class="icon">✓</span>
+        <h2>To-Do List</h2>
+      </div>
+      <div id="newtask-input">
+        <input type="text" placeholder="What needs to be done?" id="task-input">
+        <button id="push">
+          <span>Add</span>
+        </button>
+      </div>
+      <div id="tasks"></div>
+    </div>
+
+    <!-- Pomodoro Timer -->
+    <div class="column timer-column">
+      <div class="column-header">
+        <span class="icon">⏱</span>
+        <h2>Pomodoro Timer</h2>
+      </div>
+      <div class="timer-content">
+        <div id="timer">25:00</div>
+        <div class="timer-buttons">
+          <button class="timer-btn start-btn" onclick="startTimer()">
+            <span>▶</span> Start
+          </button>
+          <button class="timer-btn reset-btn" onclick="resetTimer()">
+            <span>↻</span> Reset
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- YouTube Video -->
+    <div class="column playlist-column">
+      <div class="column-header">
+        <span class="icon">♫</span>
+        <h2>Study Playlist</h2>
+      </div>
+      <div class="video-wrapper">
+        <iframe width="100%" height="100%" src="https://www.youtube.com/embed/-FlxM_0S2lA?si=qKUKMEbtwdA9_OP7"
+          title="YouTube video player" frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
